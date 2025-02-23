@@ -1,6 +1,6 @@
 # 🔐 Dictionary Attack
 
-![Dictionary Attack](Task1/Screen_shot.png)
+![Dictionary Attack](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task1/Screen_shot.png)
 
 This project demonstrates a basic dictionary attack simulation in a web environment. It allows users to attempt to crack a predefined password using a dictionary file.
 
