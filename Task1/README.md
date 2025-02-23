@@ -1,5 +1,7 @@
 # 🔐 Dictionary Attack
 
+![Dictionary Attack](Task1/Screen_shot.png)
+
 This project demonstrates a basic dictionary attack simulation in a web environment. It allows users to attempt to crack a predefined password using a dictionary file.
 
 ## ✨ Features
@@ -39,3 +41,4 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 ## 👤 Author
 
 **Ahmed Mohamed Bekhit**
+
