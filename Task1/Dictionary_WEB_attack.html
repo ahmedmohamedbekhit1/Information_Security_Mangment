@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary Attack Simulation</title>
+</head>
+
+<body>
+    <h2>Login Form</h2>
+    <label for="password">Password:</label>
+    <input type="password" id="password" />
+    <button id="loginBtn">Log In</button>
+
+    <h2>Dictionary Attack</h2>
+    <label for="dictionaryFile">Upload Dictionary File:</label>
+    <input type="file" id="dictionaryFile" accept=".txt" />
+    <button id="attackBtn">Start Attack</button>
+
+    <script>
+        document.getElementById('loginBtn').addEventListener('click', () => {
+            const userPassword = document.getElementById('password').value;
+            const correctPassword = '10dogs'; // Define the correct password
+
+            if (userPassword === correctPassword) {
+                alert('Hello!');
+            } else {
+                alert('Incorrect password');
+            }
+        });
+
+        document.getElementById('attackBtn').addEventListener('click', () => {
+            const fileInput = document.getElementById('dictionaryFile');
+            const correctPassword = '10dogs'; // Define the correct password
+
+            if (!fileInput.files.length) {
+                alert('Please upload a dictionary file.');
+                return;
+            }
+
+            const file = fileInput.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function (event) {
+                const dictionary = event.target.result.split('\n');
+                let found = false;
+
+                for (let password of dictionary) {
+                    password = password.trim();
+                    console.log(`Trying password: ${password}`);
+                    
+                    if (password === correctPassword) {
+                        alert('Hello! Password found: ' + password);
+                        found = true;
+                        break;
+                    }
+                }
+
+                if (!found) {
+                    alert('Incorrect password');
+                }
+            };
+
+            reader.readAsText(file);
+        });
+    </script>
+</body>
+
+</html>
