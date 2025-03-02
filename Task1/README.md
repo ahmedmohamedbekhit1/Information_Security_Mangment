@@ -14,7 +14,6 @@ This project demonstrates a web-based simulation of both **Dictionary Attack** a
 ## 📌 Task Details
 
 ### 1. Dictionary Attack:
-- The program allows users to enter a **username**.
 - It attempts to log in by testing different passwords from a predefined **dictionary file**.
 - If a match is found, the program stops and indicates **success**; otherwise, it reports **failure**.
 - The attack speed can be adjusted using **radio buttons** (Low, Medium, High).
