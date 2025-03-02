@@ -1,7 +1,6 @@
 # 🔐 Dictionary & Brute Force Attack Simulation
-![Dictionary Attack](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task1/Screen_shot.png)
-This project demonstrates a web-based simulation of both **Dictionary Attack** and **Brute Force Attack** to crack a predefined password. It is designed for educational purposes to understand the security vulnerabilities of weak passwords.
 ![Attack](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task1/PasswordAttackSimulation.gif)
+This project demonstrates a web-based simulation of both **Dictionary Attack** and **Brute Force Attack** to crack a predefined password. It is designed for educational purposes to understand the security vulnerabilities of weak passwords.
 
 ## ✨ Features
 
