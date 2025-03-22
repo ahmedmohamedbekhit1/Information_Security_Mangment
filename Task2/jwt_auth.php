@@ -1,11 +1,17 @@
 <?php
-// Include all required JWT library files
-require_once 'JWT/JWTExceptionWithPayloadInterface.php';
+require_once 'JWT/JWTExceptionWithPayloadInterface.php'; // Load this FIRST
 require_once 'JWT/BeforeValidException.php';
 require_once 'JWT/ExpiredException.php';
 require_once 'JWT/SignatureInvalidException.php';
-require_once 'JWT/Key.php';
 require_once 'JWT/JWT.php';
+require_once 'JWT/Key.php';
+
+use Firebase\JWT\JWT;
+use Firebase\JWT\Key;
+
+
+// rest of your code...
+
 
 
 
@@ -28,18 +34,19 @@ function generate_jwt($user_id) {
     ];
     return \Firebase\JWT\JWT::encode($payload, $secret_key, 'HS256');
 
-}
 
-/**
- * Validate a JWT token
- */
+}
 function validate_jwt($token) {
     global $secret_key;
     try {
+        error_log("Token received for validation: $token"); // Debug log
         $decoded = JWT::decode($token, new Key($secret_key, 'HS256'));
-        return $decoded->user_id; // Return the user ID from the token
+        error_log("Token decoded successfully. User ID: " . $decoded->user_id);
+        return $decoded->user_id;
     } catch (Exception $e) {
-        return false; // Token is invalid
+        error_log("JWT decode error: " . $e->getMessage()); // Key debug log
+        return false;
     }
 }
+
 ?>

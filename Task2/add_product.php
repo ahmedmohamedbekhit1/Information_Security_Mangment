@@ -1,5 +1,7 @@
 <?php
-require 'jwt_middleware.php'; // Include JWT middleware for authentication
+header('Content-Type: application/json'); // ✅ Fix for content-type mismatch
+
+require 'jwt_middleware.php';
 require 'db_connection.php';
 
 $data = json_decode(file_get_contents("php://input"), true);

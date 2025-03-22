@@ -2,6 +2,14 @@
 # RESTful API with JWT Authentication
 
 This project is a simple RESTful API built using PHP and MySQL, with JWT (JSON Web Token) authentication. It allows users to register, log in, and manage products. The API is designed to be secure, with password hashing and JWT token validation.
+### Signup Request in Postman
+![Signup Request in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/signupPostman.png)
+
+### Login Request in Postman
+![Login Request in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/login.png)
+
+### add product in Postman
+![Login Request in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/addproduct.png)
 
 ## Features
 
@@ -128,8 +136,15 @@ CREATE TABLE Products (
 ### Login Request in Postman
 ![Login Request in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/login.png)
 
+
+### add product in Postman
+![Login Request in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/addproduct.png)
+
 ### Database After Signup
 ![Database After Signup](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/signupDatabase.png)
+
+### Database After Add Product
+![Database After Signup](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/addproductDatabase.png)
 
 ## Security & Best Practices
 
