@@ -123,7 +123,7 @@ CREATE TABLE Products (
 ## Screenshots
 
 ### Signup Request in Postman
-![Signup Request in Postman]([Task2/img/](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/)signupPostman.png)
+![Signup Request in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/signupPostman.png)
 
 ### Login Request in Postman
 ![Login Request in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/login.png)
