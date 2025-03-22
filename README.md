@@ -15,7 +15,8 @@ This repository is dedicated to documenting key concepts, frameworks, and method
 ```
 📂 Information-Security-Management
 │── 📜 README.md (This file)
-│── 📁 task 1 (Documentation and code)
+│── 📁 task 1 (Documentation and code
+│── 📁 task 2 (Documentation and code)
 
 ```
 
