@@ -130,17 +130,7 @@ CREATE TABLE Products (
 
 ## Screenshots
 
-### Signup Request in Postman
-![Signup Request in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/signupPostman.png)
-
-### Login Request in Postman
-![Login Request in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/login.png)
-
-
-### add product in Postman
-![Login Request in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/addproduct.png)
-
-### Database After Signup
+### After Signup
 ![Database After Signup](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/signupDatabase.png)
 
 ### Database After Add Product
