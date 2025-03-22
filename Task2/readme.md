@@ -123,13 +123,13 @@ CREATE TABLE Products (
 ## Screenshots
 
 ### Signup Request in Postman
-![Signup Request in Postman](signupPostman.png)
+![Signup Request in Postman](Task2/img/signupPostman.png)
 
 ### Login Request in Postman
-![Login Request in Postman](login.png)
+![Login Request in Postman](Task2/img/login.png)
 
 ### Database After Signup
-![Database After Signup](signupDatabase.png)
+![Database After Signup](Task2/img/signupDatabase.png)
 
 ## Security & Best Practices
 
