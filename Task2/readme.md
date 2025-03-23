@@ -410,8 +410,8 @@ Below are the **test cases** for each endpoint:
 - **Body** (JSON):
   ```json
   {
-      "name": "Updated John Doe",
-      "username": "updated_johndoe",
+      "name": "Updated ahmed",
+      "username": "updated_ahmedbekhit",
       "password": "newpassword123"
   }
   ```
@@ -433,8 +433,8 @@ Below are the **test cases** for each endpoint:
 - **Body** (JSON):
   ```json
   {
-      "name": "Updated John Doe",
-      "username": "updated_johndoe"
+      "name": "Updated ahmed",
+      "username": "updated_ahmedbekhit"
   }
   ```
 
