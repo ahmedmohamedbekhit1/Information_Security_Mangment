@@ -12,16 +12,16 @@ if (!isset($headers['Authorization'])) {
 $authHeader = $headers['Authorization'];
 $token = str_replace("Bearer ", "", $authHeader);
 
-error_log("Token received: " . $token); // DEBUG
+error_log("Token received: " . $token);
 
 $user_id = validate_jwt($token);
 if (!$user_id) {
-    error_log("Token validation failed."); // DEBUG
+    error_log("Token validation failed."); 
     http_response_code(401);
     echo json_encode(["message" => "Unauthorized"]);
     exit();
 }
 
-error_log("Token valid. User ID: $user_id"); // DEBUG
+error_log("Token valid. User ID: $user_id");
 
 ?>
