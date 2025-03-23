@@ -4,6 +4,28 @@ This project is a simple RESTful API built using PHP and MySQL, with JWT (JSON W
 
 ---
 
+
+### **Signup Request in Postman**
+![Signup Request in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/signupPostman.png)
+
+### **Login Request in Postman**
+![Login Request in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/login.png)
+
+### **Add Product in Postman**
+![Add Product in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/addproduct.png)
+
+### **Get All Product in Postman**
+![GEt ALL Product in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/getProducts.png)
+
+### **Get Single Product in Postman**
+![Get Single Product in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/getSingleProduct.png)
+
+### **Delete Product in Postman**
+![Delete Product in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/deleteProduct.png)
+
+### **Update Product in Postman**
+![Update Product in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/updateProduct.png)
+
 ## **Features**
 
 - **User Registration**: Users can register by providing a `name`, `username`, and `password`.
@@ -379,27 +401,6 @@ Below are the **test cases** for each endpoint:
 ---
 
 ## **Screenshots**
-
-### **Signup Request in Postman**
-![Signup Request in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/signupPostman.png)
-
-### **Login Request in Postman**
-![Login Request in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/login.png)
-
-### **Add Product in Postman**
-![Add Product in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/addproduct.png)
-
-### **Get All Product in Postman**
-![GEt ALL Product in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/getProducts.png)
-
-### **Get Single Product in Postman**
-![Get Single Product in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/getSingleProduct.png)
-
-### **Delete Product in Postman**
-![Delete Product in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/deleteProduct.png)
-
-### **Update Product in Postman**
-![Update Product in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/updateProduct.png)
 
 ### **Database After Signup**
 ![Database After Signup](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/signupDatabase.png)
