@@ -1,5 +1,5 @@
 <?php
-require_once 'JWT/JWTExceptionWithPayloadInterface.php'; // Load this FIRST
+require_once 'JWT/JWTExceptionWithPayloadInterface.php'; 
 require_once 'JWT/BeforeValidException.php';
 require_once 'JWT/ExpiredException.php';
 require_once 'JWT/SignatureInvalidException.php';
