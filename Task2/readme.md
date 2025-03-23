@@ -1,34 +1,29 @@
-
 # RESTful API with JWT Authentication
 
 This project is a simple RESTful API built using PHP and MySQL, with JWT (JSON Web Token) authentication. It allows users to register, log in, and manage products. The API is designed to be secure, with password hashing and JWT token validation.
-### Signup Request in Postman
-![Signup Request in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/signupPostman.png)
 
-### Login Request in Postman
-![Login Request in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/login.png)
+---
 
-### add product in Postman
-![Login Request in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/addproduct.png)
+## **Features**
 
-## Features
-
-- **User Registration**: Users can register by providing a name, username, and password.
-- **User Login**: Users can log in using their username and password to receive a JWT token.
+- **User Registration**: Users can register by providing a `name`, `username`, and `password`.
+- **User Login**: Users can log in using their `username` and `password` to receive a JWT token.
 - **Product Management**: Authenticated users can add, retrieve, update, and delete products.
 - **JWT Authentication**: Protects certain routes by requiring a valid JWT token.
 
-## Database Schema
+---
+
+## **Database Schema**
 
 The database consists of two tables:
 
-### Users Table
+### **Users Table**
 - `id` (Primary Key, Auto-increment)
 - `name` (String, Required)
 - `username` (String, Unique, Required)
 - `password` (Hashed, Required)
 
-### Products Table
+### **Products Table**
 - `pid` (Primary Key, Auto-increment)
 - `pname` (String, Required)
 - `description` (Text)
@@ -36,22 +31,35 @@ The database consists of two tables:
 - `stock` (Integer, Required)
 - `created_at` (Timestamp)
 
-## API Endpoints
+---
 
-### Authentication
-- **POST /signup**: Register a new user.
-- **POST /login**: Authenticate user and return JWT token.
+## **API Endpoints**
 
-### User Operations
-- **PUT /users/{id}**: Update user details (requires valid JWT token).
+### **Authentication**
+1. **POST /signup**: Register a new user.
+2. **POST /login**: Authenticate user and return JWT token.
 
-### Product Operations (Require JWT Token)
-- **POST /products**: Add a new product.
-- **GET /products**: Retrieve all products.
-- **GET /products/{pid}**: Retrieve a single product by ID.
-- **PUT /products/{pid}**: Update product details.
-- **DELETE /products/{pid}**: Delete a product.
+### **User Operations**
+3. **PUT /users/{id}**: Update user details (requires valid JWT token).
 
+### **Product Operations (Require JWT Token)**
+4. **POST /products**: Add a new product.
+5. **GET /products**: Retrieve all products.
+6. **GET /products/{pid}**: Retrieve a single product by ID.
+7. **PUT /products/{pid}**: Update product details.
+8. **DELETE /products/{pid}**: Delete a product.
+
+---
+
+## **Setup Instructions**
+
+1. **Install XAMPP**:
+   - Download and install XAMPP from [https://www.apachefriends.org/index.html](https://www.apachefriends.org/index.html).
+   - Start the Apache and MySQL services.
+
+2. **Create the Database**:
+   - Open phpMyAdmin and create a new database named `restful_api`.
+   - Run the following SQL queries to create the `Users` and `Products` tables:
 
 ```sql
 CREATE TABLE Users (
@@ -83,9 +91,11 @@ CREATE TABLE Products (
 5. **Run the API**:
    - Access the API endpoints using Postman or any API testing tool.
 
-## Testing the API
+---
 
-### Signup
+## **Testing the API**
+
+### **Signup**
 - **URL**: `http://localhost/RESTful_API/signup.php`
 - **Method**: `POST`
 - **Headers**:
@@ -99,7 +109,7 @@ CREATE TABLE Products (
   }
   ```
 
-### Login
+### **Login**
 - **URL**: `http://localhost/RESTful_API/login.php`
 - **Method**: `POST`
 - **Headers**:
@@ -112,7 +122,7 @@ CREATE TABLE Products (
   }
   ```
 
-### Add Product
+### **Add Product**
 - **URL**: `http://localhost/RESTful_API/add_product.php`
 - **Method**: `POST`
 - **Headers**:
@@ -128,27 +138,40 @@ CREATE TABLE Products (
   }
   ```
 
-## Screenshots
+---
 
-### After Signup
+## **Screenshots**
+
+### **Signup Request in Postman**
+![Signup Request in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/signupPostman.png)
+
+### **Login Request in Postman**
+![Login Request in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/login.png)
+
+### **Add Product in Postman**
+![Add Product in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/addproduct.png)
+
+### **Database After Signup**
 ![Database After Signup](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/signupDatabase.png)
 
-### Database After Add Product
-![Database After Signup](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/addproductDatabase.png)
+### **Database After Adding a Product**
+![Database After Adding a Product](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/addproductDatabase.png)
 
-## Security & Best Practices
+---
 
-- **Password Hashing**: Passwords are hashed using `password_hash()` before storing them in the database.
+## **Security & Best Practices**
+
+- **Password Hashing**: Passwords are hashed using `password_hash()` before being stored in the database.
 - **JWT Authentication**: JWT tokens are used for authentication and are valid for 10 minutes.
-- **Environment Variables**: Sensitive information like the JWT secret key is stored in environment variables.
+- **Environment Variables**: Sensitive information like the JWT secret key is stored in environment variables for security.
+- **Input Validation**: All user inputs are validated to prevent SQL injection and other attacks.
 
-## Evaluation Criteria
+---
 
-- Correct database schema design with ORM.
-- Proper implementation of authentication and JWT.
-- API functionality for CRUD operations.
-- Secure password handling and token validation.
-- Code readability and documentation.
+## **Evaluation Criteria**
 
-
-Let me know if you need further assistance! 😊
+- **Correct Database Schema**: The database schema is correctly designed and implemented using MySQL.
+- **JWT Authentication**: Proper implementation of JWT-based authentication.
+- **API Functionality**: All CRUD operations for users and products are functional.
+- **Security**: Passwords are hashed, and JWT tokens are validated.
+- **Code Quality**: The code is readable, well-documented, and follows best practices.
