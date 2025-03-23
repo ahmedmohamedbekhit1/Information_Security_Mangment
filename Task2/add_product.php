@@ -1,6 +1,5 @@
 <?php
-header('Content-Type: application/json'); // ✅ Fix for content-type mismatch
-
+header('Content-Type: application/json'); 
 require 'jwt_middleware.php';
 require 'db_connection.php';
 
