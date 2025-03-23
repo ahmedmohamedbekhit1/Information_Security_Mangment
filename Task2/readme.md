@@ -3,7 +3,8 @@
 This project is a simple RESTful API built using PHP and MySQL, with JWT (JSON Web Token) authentication. It allows users to register, log in, and manage products. The API is designed to be secure, with password hashing and JWT token validation.
 
 ---
-
+`jwt_middleware.php`  | Protects routes by validating JWT tokens.    
+`jwt_auth.php`        | Manages JWT token generation and validation.   
 
 ### **Signup Request in Postman**
 ![Signup Request in Postman](https://github.com/ahmedmohamedbekhit1/Information_Security_Mangment/blob/main/Task2/img/signupPostman.png)
