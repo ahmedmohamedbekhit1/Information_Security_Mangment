@@ -95,48 +95,286 @@ CREATE TABLE Products (
 
 ## **Testing the API**
 
-### **Signup**
-- **URL**: `http://localhost/RESTful_API/signup.php`
-- **Method**: `POST`
-- **Headers**:
-  - `Content-Type: application/json`
-- **Body** (JSON):
-  ```json
-  {
-      "name": "John Doe",
-      "username": "johndoe",
-      "password": "password123"
-  }
-  ```
+Below are the **test cases** for each endpoint:
 
-### **Login**
-- **URL**: `http://localhost/RESTful_API/login.php`
-- **Method**: `POST`
-- **Headers**:
-  - `Content-Type: application/json`
-- **Body** (JSON):
-  ```json
-  {
-      "username": "johndoe",
-      "password": "password123"
-  }
-  ```
+---
 
-### **Add Product**
-- **URL**: `http://localhost/RESTful_API/add_product.php`
-- **Method**: `POST`
-- **Headers**:
-  - `Content-Type: application/json`
-  - `Authorization: Bearer <JWT_TOKEN>`
-- **Body** (JSON):
-  ```json
-  {
-      "pname": "Laptop",
-      "description": "A high-performance laptop",
-      "price": 1200.00,
-      "stock": 10
-  }
-  ```
+### **1. Signup**
+
+#### **Endpoint**: `POST /signup`
+
+#### **Test Case 1: Successful Signup**
+- **Request**:
+  - **URL**: `http://localhost/RESTful_API/signup.php`
+  - **Method**: `POST`
+  - **Headers**:
+    - `Content-Type: application/json`
+  - **Body** (JSON):
+    ```json
+    {
+        "name": "John Doe",
+        "username": "johndoe",
+        "password": "password123"
+    }
+    ```
+- **Expected Response**:
+  - **Status Code**: `201 Created`
+  - **Response Body**:
+    ```json
+    {
+        "message": "User registered successfully"
+    }
+    ```
+
+#### **Test Case 2: Missing Required Fields**
+- **Request**:
+  - **Body** (JSON):
+    ```json
+    {
+        "name": "John Doe",
+        "username": "johndoe"
+    }
+    ```
+- **Expected Response**:
+  - **Status Code**: `400 Bad Request`
+  - **Response Body**:
+    ```json
+    {
+        "message": "Missing required fields"
+    }
+    ```
+
+#### **Test Case 3: Duplicate Username**
+- **Request**:
+  - **Body** (JSON):
+    ```json
+    {
+        "name": "John Doe",
+        "username": "johndoe",
+        "password": "password123"
+    }
+    ```
+- **Expected Response**:
+  - **Status Code**: `400 Bad Request`
+  - **Response Body**:
+    ```json
+    {
+        "message": "Username already exists"
+    }
+    ```
+
+---
+
+### **2. Login**
+
+#### **Endpoint**: `POST /login`
+
+#### **Test Case 1: Successful Login**
+- **Request**:
+  - **URL**: `http://localhost/RESTful_API/login.php`
+  - **Method**: `POST`
+  - **Headers**:
+    - `Content-Type: application/json`
+  - **Body** (JSON):
+    ```json
+    {
+        "username": "johndoe",
+        "password": "password123"
+    }
+    ```
+- **Expected Response**:
+  - **Status Code**: `200 OK`
+  - **Response Body**:
+    ```json
+    {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+    }
+    ```
+
+#### **Test Case 2: Invalid Credentials**
+- **Request**:
+  - **Body** (JSON):
+    ```json
+    {
+        "username": "johndoe",
+        "password": "wrongpassword"
+    }
+    ```
+- **Expected Response**:
+  - **Status Code**: `401 Unauthorized`
+  - **Response Body**:
+    ```json
+    {
+        "message": "Invalid credentials"
+    }
+    ```
+
+---
+
+### **3. Add Product**
+
+#### **Endpoint**: `POST /products`
+
+#### **Test Case 1: Successful Product Addition**
+- **Request**:
+  - **URL**: `http://localhost/RESTful_API/add_product.php`
+  - **Method**: `POST`
+  - **Headers**:
+    - `Content-Type: application/json`
+    - `Authorization: Bearer <JWT_TOKEN>`
+  - **Body** (JSON):
+    ```json
+    {
+        "pname": "Laptop",
+        "description": "A high-performance laptop",
+        "price": 1200.00,
+        "stock": 10
+    }
+    ```
+- **Expected Response**:
+  - **Status Code**: `201 Created`
+  - **Response Body**:
+    ```json
+    {
+        "message": "Product added successfully"
+    }
+    ```
+
+#### **Test Case 2: Missing Required Fields**
+- **Request**:
+  - **Body** (JSON):
+    ```json
+    {
+        "pname": "Laptop",
+        "price": 1200.00
+    }
+    ```
+- **Expected Response**:
+  - **Status Code**: `400 Bad Request`
+  - **Response Body**:
+    ```json
+    {
+        "message": "Missing required fields"
+    }
+    ```
+
+---
+
+### **4. Retrieve All Products**
+
+#### **Endpoint**: `GET /products`
+
+#### **Test Case 1: Successful Retrieval**
+- **Request**:
+  - **URL**: `http://localhost/RESTful_API/get_products.php`
+  - **Method**: `GET`
+  - **Headers**:
+    - `Authorization: Bearer <JWT_TOKEN>`
+- **Expected Response**:
+  - **Status Code**: `200 OK`
+  - **Response Body**:
+    ```json
+    [
+        {
+            "pid": 1,
+            "pname": "Laptop",
+            "description": "A high-performance laptop",
+            "price": 1200.00,
+            "stock": 10,
+            "created_at": "2023-10-01 12:34:56"
+        }
+    ]
+    ```
+
+---
+
+### **5. Retrieve a Single Product**
+
+#### **Endpoint**: `GET /products/{pid}`
+
+#### **Test Case 1: Successful Retrieval**
+- **Request**:
+  - **URL**: `http://localhost/RESTful_API/get_product.php?pid=1`
+  - **Method**: `GET`
+  - **Headers**:
+    - `Authorization: Bearer <JWT_TOKEN>`
+- **Expected Response**:
+  - **Status Code**: `200 OK`
+  - **Response Body**:
+    ```json
+    {
+        "pid": 1,
+        "pname": "Laptop",
+        "description": "A high-performance laptop",
+        "price": 1200.00,
+        "stock": 10,
+        "created_at": "2023-10-01 12:34:56"
+    }
+    ```
+
+#### **Test Case 2: Product Not Found**
+- **Request**:
+  - **URL**: `http://localhost/RESTful_API/get_product.php?pid=999`
+- **Expected Response**:
+  - **Status Code**: `404 Not Found`
+  - **Response Body**:
+    ```json
+    {
+        "message": "Product not found"
+    }
+    ```
+
+---
+
+### **6. Update Product**
+
+#### **Endpoint**: `PUT /products/{pid}`
+
+#### **Test Case 1: Successful Update**
+- **Request**:
+  - **URL**: `http://localhost/RESTful_API/update_product.php?pid=1`
+  - **Method**: `PUT`
+  - **Headers**:
+    - `Content-Type: application/json`
+    - `Authorization: Bearer <JWT_TOKEN>`
+  - **Body** (JSON):
+    ```json
+    {
+        "pname": "Updated Laptop",
+        "description": "An updated high-performance laptop",
+        "price": 1300.00,
+        "stock": 5
+    }
+    ```
+- **Expected Response**:
+  - **Status Code**: `200 OK`
+  - **Response Body**:
+    ```json
+    {
+        "message": "Product updated successfully"
+    }
+    ```
+
+---
+
+### **7. Delete Product**
+
+#### **Endpoint**: `DELETE /products/{pid}`
+
+#### **Test Case 1: Successful Deletion**
+- **Request**:
+  - **URL**: `http://localhost/RESTful_API/delete_product.php?pid=1`
+  - **Method**: `DELETE`
+  - **Headers**:
+    - `Authorization: Bearer <JWT_TOKEN>`
+- **Expected Response**:
+  - **Status Code**: `200 OK`
+  - **Response Body**:
+    ```json
+    {
+        "message": "Product deleted successfully"
+    }
+    ```
 
 ---
 
