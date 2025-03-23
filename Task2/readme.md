@@ -399,6 +399,70 @@ Below are the **test cases** for each endpoint:
     }
     ```
 
+### **Test Case 1: Successful Update**
+
+#### **Request**:
+- **URL**: `http://localhost/RESTful_API/update_user.php?id=1`
+- **Method**: `PUT`
+- **Headers**:
+  - `Content-Type: application/json`
+  - `Authorization: Bearer <JWT_TOKEN>`
+- **Body** (JSON):
+  ```json
+  {
+      "name": "Updated John Doe",
+      "username": "updated_johndoe",
+      "password": "newpassword123"
+  }
+  ```
+
+#### **Expected Response**:
+- **Status Code**: `200 OK`
+- **Response Body**:
+  ```json
+  {
+      "message": "User updated successfully"
+  }
+  ```
+
+---
+
+### **Test Case 2: Missing Required Fields**
+
+#### **Request**:
+- **Body** (JSON):
+  ```json
+  {
+      "name": "Updated John Doe",
+      "username": "updated_johndoe"
+  }
+  ```
+
+#### **Expected Response**:
+- **Status Code**: `400 Bad Request`
+- **Response Body**:
+  ```json
+  {
+      "message": "Missing required fields"
+  }
+  ```
+
+---
+
+### **Test Case 3: Invalid JWT Token**
+
+#### **Request**:
+- **Headers**:
+  - `Authorization: Bearer invalid_token`
+
+#### **Expected Response**:
+- **Status Code**: `401 Unauthorized`
+- **Response Body**:
+  ```json
+  {
+      "message": "Unauthorized"
+  }
+  ```
 ---
 
 ## **Screenshots**
