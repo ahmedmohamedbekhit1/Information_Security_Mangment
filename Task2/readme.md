@@ -112,8 +112,8 @@ Below are the **test cases** for each endpoint:
   - **Body** (JSON):
     ```json
     {
-        "name": "John Doe",
-        "username": "johndoe",
+        "name": "ahmed",
+        "username": "ahmedbekhit",
         "password": "password123"
     }
     ```
@@ -131,8 +131,8 @@ Below are the **test cases** for each endpoint:
   - **Body** (JSON):
     ```json
     {
-        "name": "John Doe",
-        "username": "johndoe"
+        "name": "ahmed",
+        "username": "ahmedbekhit"
     }
     ```
 - **Expected Response**:
@@ -149,8 +149,8 @@ Below are the **test cases** for each endpoint:
   - **Body** (JSON):
     ```json
     {
-        "name": "John Doe",
-        "username": "johndoe",
+        "name": "ahmed",
+        "username": "ahmedbekhit",
         "password": "password123"
     }
     ```
@@ -178,7 +178,7 @@ Below are the **test cases** for each endpoint:
   - **Body** (JSON):
     ```json
     {
-        "username": "johndoe",
+        "username": "ahmedbekhit",
         "password": "password123"
     }
     ```
@@ -196,7 +196,7 @@ Below are the **test cases** for each endpoint:
   - **Body** (JSON):
     ```json
     {
-        "username": "johndoe",
+        "username": "ahmedbekhit",
         "password": "wrongpassword"
     }
     ```
